@@ -56,14 +56,12 @@ export default defineConfig(() => ({
     manifest: true,
     minify: true,
     reportCompressedSize: true,
-    brotliSize: true,
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       fileName: 'index',
       formats: ['es', 'cjs'],
     },
     rollupOptions: {
-      external: [],
       plugins: [
         typescriptPaths({
           preserveExtensions: true,
@@ -72,6 +70,7 @@ export default defineConfig(() => ({
           sourceMap: false,
           declaration: true,
           outDir: 'dist',
+          exclude: ['**/*.test.ts', 'tsconfig.tsbuildinfo'],
         }),
       ],
     },
