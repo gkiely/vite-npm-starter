@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "allowJs": false,
+    "skipLibCheck": true,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    // Type checking
+    "strict": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "useDefineForClassFields": true,
+    "useUnknownInCatchVariables": true,
+    "noErrorTruncation": true,
+    "types": ["@types/node", "vitest/globals", "@testing-library/jest-dom"],
+    "paths": {
+      "components/*": ["./src/app/components/*"],
+      "elements/*": ["./src/app/elements/*"],
+      "containers/*": ["./src/app/containers/*"],
+      "groups/*": ["./src/app/groups/*"],
+      "routes": ["./src/app/routes"],
+      "routes/*": ["./src/app/routes/*"],
+      "sections/*": ["./src/app/sections/*"],
+      "store/*": ["./src/app/store/*"],
+      "utils": ["./src/app/utils"],
+      "utils/*": ["./src/app/utils/*"],
+      "img/*": ["./src/app/img/*"],
+      "server/*": ["./server/*"],
+      "common/*": ["./src/common/*"],
+      "machines/*": ["./src/app/machines/*"],
+      "types": ["./src/app/types"]
+    }
+  },
+  "typeRoots": ["./node_modules/@types", "./src/types"],
+  "include": ["src", "server"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
