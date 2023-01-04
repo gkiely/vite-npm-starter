@@ -3,26 +3,21 @@
     "shared-node-browser": true,
     "es2022": true
   },
-  "ignorePatterns": ["src/**/*.generated.ts"],
+  "ignorePatterns": ["src/types/global.d.ts"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "tsconfigRootDir": ".",
-    "project": ["./tsconfig.json", "./tsconfig.node.json"]
+    "project": ["./tsconfig.json"]
   },
-  "plugins": ["@typescript-eslint", "testing-library", "regexp", "validate-jsx-nesting", "fp", "unicorn", "promise"],
+  "plugins": ["@typescript-eslint", "regexp", "fp", "unicorn", "promise"],
   "extends": [
     "eslint:recommended",
-    "react-app",
-    "plugin:react-hooks/recommended",
     "plugin:escompat/typescript",
     "plugin:regexp/recommended",
-    "plugin:testing-library/react",
     "plugin:promise/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:no-await-in-promise/recommended",
-    "plugin:jsx-no-leaked-values/recommended",
-    "plugin:no-state-hooks/recommended"
+    "plugin:no-await-in-promise/recommended"
   ],
   "rules": {
     "no-sequences": "off",
@@ -48,8 +43,6 @@
     "no-alert": "warn",
     "yoda": "warn",
     "radix": ["warn", "as-needed"],
-    "import/first": "warn",
-    "import/no-anonymous-default-export": "error", // This is required for hot reloading
     "prefer-regex-literals": "warn",
     "prefer-object-spread": "warn",
     "prefer-arrow-callback": "warn",
@@ -66,18 +59,7 @@
     "no-constant-binary-expression": "error",
     "fp/no-class": "error",
     "fp/no-this": "error",
-    "react/jsx-no-literals": [
-      "error",
-      {
-        "noStrings": true,
-        "ignoreProps": true
-      }
-    ],
-    "react/jsx-no-target-blank": "error",
-    "react/iframe-missing-sandbox": "error",
     "regexp/no-unused-capturing-group": "off",
-    "testing-library/no-debugging-utils": "off",
-    "testing-library/render-result-naming-convention": "off",
     "@typescript-eslint/no-unnecessary-type-constraint": "off",
     "@typescript-eslint/no-unused-vars": [
       "warn",
@@ -128,7 +110,6 @@
     "unicorn/no-zero-fractions": "error",
     "unicorn/no-unsafe-regex": "error",
     "unicorn/no-unreadable-iife": "error",
-    "unicorn/no-null": "error",
-    "validate-jsx-nesting/no-invalid-jsx-nesting": "error"
+    "unicorn/no-null": "error"
   }
 }

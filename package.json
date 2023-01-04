@@ -1,5 +1,5 @@
 {
-  "name": "vite-react-starter",
+  "name": "vite-npm-starter",
   "private": false,
   "version": "0.0.0",
   "author": "Grant Kiely <grant.kiely@gmail.com>",
@@ -7,12 +7,24 @@
   "volta": {
     "node": "18.4.0"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js"
+    }
+  },
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.es.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gkiely/vite-react-starter.git"
+    "url": "git+https://github.com/gkiely/vite-npm-starter.git"
   },
   "bugs": {
-    "url": "https://github.com/gkiely/vite-react-starter/issues"
+    "url": "https://github.com/gkiely/vite-npm-starter/issues"
   },
   "keywords": [
     "vite",
@@ -58,6 +70,7 @@
     ]
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^10.0.1",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^5.38.1",
     "@vitest/coverage-c8": "^0.23.4",
@@ -80,6 +93,7 @@
     "eslint-plugin-validate-jsx-nesting": "^0.1.0",
     "prettier": "^2.7.1",
     "rollup-plugin-license": "^3.0.1",
+    "rollup-plugin-typescript-paths": "^1.4.0",
     "simple-git-hooks": "^2.8.0",
     "typescript": "^4.8.2",
     "vite": "^3.1.4",

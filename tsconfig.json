@@ -13,7 +13,6 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
 
     // Type checking
     "strict": true,
@@ -27,26 +26,8 @@
     "useDefineForClassFields": true,
     "useUnknownInCatchVariables": true,
     "noErrorTruncation": true,
-    "types": ["@types/node", "vitest/globals", "@testing-library/jest-dom"],
-    "paths": {
-      "components/*": ["./src/app/components/*"],
-      "elements/*": ["./src/app/elements/*"],
-      "containers/*": ["./src/app/containers/*"],
-      "groups/*": ["./src/app/groups/*"],
-      "routes": ["./src/app/routes"],
-      "routes/*": ["./src/app/routes/*"],
-      "sections/*": ["./src/app/sections/*"],
-      "store/*": ["./src/app/store/*"],
-      "utils": ["./src/app/utils"],
-      "utils/*": ["./src/app/utils/*"],
-      "img/*": ["./src/app/img/*"],
-      "server/*": ["./server/*"],
-      "common/*": ["./src/common/*"],
-      "machines/*": ["./src/app/machines/*"],
-      "types": ["./src/app/types"]
-    }
+    "types": ["@types/node", "vitest/globals"],
   },
-  "typeRoots": ["./node_modules/@types", "./src/types"],
-  "include": ["src", "server"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src/*"],
+  "typeRoots": ["./node_modules/@types", "./src/types"]
 }

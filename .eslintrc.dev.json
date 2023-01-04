@@ -5,7 +5,7 @@
   "parserOptions": {
     "project": null
   },
-  "plugins": ["testing-library", "no-only-tests"],
+  "plugins": ["no-only-tests"],
   "rules": {
     "no-only-tests/no-only-tests": ["error", {"fix": true}],
     "@typescript-eslint/no-unused-vars": "warn",
